@@ -31,13 +31,13 @@
 {
     padding: 20px;
     background-color: #f44336; /* Red */
-    color: white;
+    color: black;
     margin-bottom: 30px;
 }
 
 .coinmarketcap-currency-widget div > span
 {
-    color: white;
+    color: black;
 }
 
 .coinmarketcap-currency-widget div > span:last-child
