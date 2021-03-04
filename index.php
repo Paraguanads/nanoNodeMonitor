@@ -13,7 +13,7 @@ if ($currency == 'banano');
   <div class="row">
     <div class="col-lg-8 col-md-6 col-sm-6">
       <a href="<?php echo $coinURL; ?>" target="_blank" rel="noopener">
-        <img src="static/img/banano-full-<?php echo $themeChoice; ?>.svg" width="220" alt="Logo"/>
+        <img src="static/img/nano-full-banano<?php echo $themeChoice; ?>.svg" width="220" alt="Logo"/>
       </a>
       <p class="lead mt-2"><?php echo currencyName($currency); ?> Node Monitor</p>
       <p><?php echo $welcomeMsg; ?></p>
