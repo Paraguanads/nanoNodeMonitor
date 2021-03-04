@@ -1,13 +1,13 @@
 /* Load Font */
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 /**
  -- Body CSS
  */
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'DotGothic16', sans-serif;
     background: #f8fbff ;
     color: #222629;
     -webkit-background-size: cover;
