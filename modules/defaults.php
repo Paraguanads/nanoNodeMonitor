@@ -6,25 +6,22 @@
 
 // ----------- General Variables -----------
 
-// Currency 'nano' or 'banano'
-$currency = 'nano';
+// Currency 
+$currency = 'banano';
 
 // Theme of your Node Monitor
-// Nano Themes:   'dark' or 'light'
-// Banano Themes: 'banano'
-$themeChoice = 'light';
+// Default theme: 'banano'
+$themeChoice = 'banano';
 
 // Choice of block explorer
-// Nano Explorers:      'ninja', 'nanocrawler'
-// Nano Beta Explorers: 'nanocrawler-beta'
-// Banano Explorers:    'banano'
-$blockExplorer = 'nanocrawler';
+// Banano Official Explorer: 'banano'
+$blockExplorer = 'banano';
 
 // autorefresh interval for the status webpage in seconds
 $autoRefreshInSeconds = 5;
 
 // Name of your node (default: your hostname)
-$nanoNodeName = gethostname();
+$bananoNodeName = gethostname();
 
 // Location of your node
 $nodeLocation = NULL;
@@ -34,7 +31,7 @@ $welcomeMsg = '';
 
 // ----------- Cache Engine -----------
 
-// The cache engine allows for caching of RPC calls to reduce load on your Nano node.
+// The cache engine allows for caching of RPC calls to reduce load on your Banano node.
 
 // Duration in seconds between cache invalidation, i.e. RPC calls to the node
 $cacheTimeToLive = 30;
@@ -55,21 +52,19 @@ $cache = [
 // ----------- Nano Node Variables -----------
 
 // IP address for RPC (default: 127.0.0.1)
-$nanoNodeRPCIP   = '[::1]';
+$bananoNodeRPCIP   = '[::1]';
 
-// IP address for RPC (default: 7076)
-// Nano nodes typically use port 7076.
 // Banano nodes typically use port 7072.
-$nanoNodeRPCPort = '7076';
+$bananoNodeRPCPort = '7072';
 
 // Account of this node
-$nanoNodeAccount = '';
+$bananoNodeAccount = '';
 
 // Donation account for maintaining this node
-$nanoDonationAccount = $nanoNodeAccount;
+$bananoDonationAccount = $nanoNodeAccount;
 
 // Number of decimal places to display Nano balances, i.e.
-$nanoNumDecimalPlaces = 0;
+$bananoNumDecimalPlaces = 0;
 
 // ----------- Monitoring -----------
 

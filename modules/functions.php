@@ -117,7 +117,7 @@ function getLatestReleaseVersion()
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_HTTPHEADER => array(
       "cache-control: no-cache",
-      "User-Agent: NanoNodeMonitor"
+      "User-Agent: BaNanoNodeMonitor"
     ),
   ));
 
@@ -184,7 +184,7 @@ function getLatestNodeReleaseVersion()
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_HTTPHEADER => array(
       "cache-control: no-cache",
-      "User-Agent: NanoNodeMonitor"
+      "User-Agent: BaNanoNodeMonitor"
     ),
   ));
 
@@ -332,63 +332,6 @@ function getSyncStatus($node_blockcount, $telemetry_blockcount){
     return 100;
   }
   return $sync;
-}
-
-// get node location
-// 1) If location is set by user, we use it.
-// 2) If location not set by user, we try to get if from ninja.
-function getNodeLocation($nodeLocationByUser, $nodeNinja) {
-
-    $locationDefault = "N/A";
-    $location = $locationDefault;
-
-    if ($nodeLocationByUser) {
-        // location set by user
-        $location = $nodeLocationByUser;
-    }
-    elseif ($nodeNinja && array_key_exists('location', $nodeNinja)) {
-
-        // location taken from ninja's location object
-        $locationObj = $nodeNinja->{'location'};
-
-        $locCity = '';
-        $locCountry = '';
-
-        // get city from ninja's location object
-        if ($locationObj && isset($locationObj->city)) {
-          $locCity = $locationObj->city;
-        }
-
-        // get country from ninja's location object
-        if ($locationObj && isset($locationObj->country)) {
-          $locCountry = $locationObj->country;
-        }
-
-        // city and country available
-        if (! empty($locCity) && ! empty($locCountry)) {
-          $location = $locCity . ', ' . $locCountry;
-        }
-        elseif (! empty($locCity)) {
-          // only city
-          $location = $locCity;
-        }
-        elseif (! empty($locCountry)) {
-          // only country
-          $location = $locCountry;
-        }
-        else
-        {
-          // nothing given
-          $location = $locationDefault;
-        }
-    }
-   
-    // run some final checks on location
-    if (is_null($location) || empty($location)) {
-      $location = $locationDefault;
-    }
-
-    return $location;
 }
 
 
